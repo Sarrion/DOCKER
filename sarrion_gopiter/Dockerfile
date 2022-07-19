@@ -1,5 +1,5 @@
 FROM \
-  ubuntu:21.04
+  --platform=linux/amd64 ubuntu:20.04
 
 RUN apt-get update
 RUN apt-get -y upgrade
