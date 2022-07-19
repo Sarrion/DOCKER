@@ -22,6 +22,8 @@ RUN mv spark-3.0.3-bin-hadoop2.7 /opt/spark
 ENV SPARK_HOME=/opt/spark
 ENV PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 
+COPY ./spark-avro_2.12-2.4.8.jar $SPARK_HOME/jars/spark-avro_2.12-2.4.8.jar # this is to be able to read avros. Line still not tested
+
 RUN rm scala-2.11.12.deb
 RUN rm spark-3.0.3-bin-hadoop2.7.tgz
 
