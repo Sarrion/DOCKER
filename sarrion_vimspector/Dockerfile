@@ -13,4 +13,12 @@ COPY fib.c /root/fib.c
 RUN vim +PluginInstall +qall
 RUN vim +'VimspectorInstall vscode-cpptools' +'sleep 50' +qall
 
+
+# adding some style to vim
+COPY .bashrc /root/.bashrc
+RUN mkdir /root/.vim/colors
+# RUN git clone https://github.com/glepnir/oceanic-material && \
+#     cp oceanic-material/colors/oceanic_material.vim /root/.vim/colors/
+COPY oceanic-material/colors/oceanic_material.vim /root/.vim/colors/
+
 CMD ["bash"]

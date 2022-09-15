@@ -54,7 +54,7 @@ nnoremap <leader>m :set mouse=n<cr>
 nnoremap <leader>N :set number<cr>
 
 " VIMSPECTOR SHORTCUTS
-nnoremap <leader>l :call vimspector#Launch()<cr>
+nnoremap <leader>l :call vimspector#Launch()<cr>:colorscheme oceanic_material<cr>gT:q<cr>
 nnoremap <leader>n :call vimspector#StepOver()<cr>
 nnoremap <leader>c :call vimspector#Continue()<cr>
 nnoremap <leader>s :call vimspector#StepInto()<cr>
