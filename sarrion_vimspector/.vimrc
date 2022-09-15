@@ -3,6 +3,8 @@ set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let mapleader = "\<space>"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -12,7 +14,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-let g:vimspector_enable_mappings = 'HUMAN'
+" let g:vimspector_enable_mappings = 'HUMAN'
 Plugin 'puremourning/vimspector'
 
 " The following are examples of different formats supported.
@@ -46,3 +48,19 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" SHORTCUTS
+nnoremap <leader>m :set mouse=n<cr>
+nnoremap <leader>N :set number<cr>
+
+" VIMSPECTOR SHORTCUTS
+nnoremap <leader>l :call vimspector#Launch()<cr>
+nnoremap <leader>n :call vimspector#StepOver()<cr>
+nnoremap <leader>c :call vimspector#Continue()<cr>
+nnoremap <leader>s :call vimspector#StepInto()<cr>
+nnoremap <leader>o :call vimspector#StepOut()<cr>
+nnoremap <leader>b :call vimspector#ToggleBreakpoint()<cr>
+nnoremap <leader>d :call vimspector#ClearBreakpoints()<cr>
+" nnoremap <leader>w :call vimspector#AddWatch( expand( '<cexpr>' ) )<cr>
+nnoremap <leader>w :call vimspector#AddWatch( '' )
+nnoremap <leader>e :call vimspector#Evaluate( '' )
