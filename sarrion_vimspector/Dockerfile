@@ -28,7 +28,7 @@ COPY oceanic-material/colors/oceanic_material.vim /root/.vim/colors/
 #RUN apt-get install -y glibc-source
 #  this way you untar the file, move it to /usr/src/glibc
 # and link it using the vimspector -exec to comunicate with gdb
-# i.e. something like: -exec directory /usr/src/glibc/glibc-2.35
+# i.e. something like: :VimspectorEval -exec directory /usr/src/glibc/glibc-2.35
 
 
 CMD ["bash"]
